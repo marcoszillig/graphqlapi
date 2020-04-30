@@ -1,0 +1,13 @@
+name: node-graphql-api
+recipe: mean
+config:
+  node: 12
+  build:
+    - npm install
+  command: npm start
+  database: mysql
+  globals: []
+  port: '3000'
+  ssl: false
+  config:
+    database: mysql
