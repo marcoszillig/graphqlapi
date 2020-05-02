@@ -5,9 +5,16 @@ config:
   build:
     - npm install
   command: npm start
-  database: mysql
+  database: mongo:4.0
   globals: []
   port: '3000'
   ssl: false
-  config:
-    database: mysql
+services:
+  mysql:
+    type: mysql
+    overrides:
+      image: bitnami/mysql:5.7.28
+    creds:
+      user: root
+      password: root
+      database: blog
